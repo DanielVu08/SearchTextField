@@ -120,7 +120,7 @@ open class SearchTextField: UITextField {
     ////////////////////////////////////////////////////////////////////////
     // Private implementation
     
-    fileprivate var tableView: UITableView?
+    open var tableView: UITableView?
     fileprivate var shadowView: UIView?
     fileprivate var direction: Direction = .down
     fileprivate var fontConversionRate: CGFloat = 0.7
@@ -131,7 +131,7 @@ open class SearchTextField: UITextField {
     fileprivate let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     fileprivate var maxTableViewSize: CGFloat = 0
     
-    fileprivate var filteredResults = [SearchTextFieldItem]()
+    open var filteredResults = [SearchTextFieldItem]()
     fileprivate var filterDataSource = [SearchTextFieldItem]() {
         didSet {
             filter(forceShowAll: false)
